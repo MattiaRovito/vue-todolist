@@ -16,7 +16,7 @@ const app = new Vue ({
 
     data :
     {
-        
+        nuovaLista : '',
         lista : [
             'Organizzare il trasloco',
             'Fare la spesa',
@@ -27,8 +27,9 @@ const app = new Vue ({
 
     methods :
     {
-
+        pushToDo(){
+            this.lista.push(this.nuovaLista);
+            this.nuovaLista = '';
+        }
     }
-
-
 });
