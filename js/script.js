@@ -27,9 +27,19 @@ const app = new Vue ({
 
     methods :
     {
+        capitalize(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        },
         pushToDo(){
-            this.lista.push(this.nuovaLista);
+            if (this.nuovaLista == ''){
+                alert('Inserire del testo');
+            }else{
+            this.lista.push(this.nuovaLista.toUpperCase(1));
             this.nuovaLista = '';
-        }
+            }
+        } 
     }
 });
+
+
+
