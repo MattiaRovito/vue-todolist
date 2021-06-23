@@ -13,10 +13,15 @@ const app = new Vue ({
 
     el : "#app",
 
-    
+
     data :
     {
-
+        
+        lista : [
+            'Organizzare il trasloco',
+            'Fare la spesa',
+            'Mandare e-mail a J.J.'
+        ]
     },
 
 
