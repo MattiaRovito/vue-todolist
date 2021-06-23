@@ -35,13 +35,16 @@
 
         
         <div class="list clearfix">
-            <ul>
-                <li v-for="item in lista">
+            <ul v-if ="lista.length > 0">
+                <li v-for="(item, index) in lista">
                     {{item}} 
-                    <i class="fas fa-trash-alt"></i>
+                    <i class="fas fa-trash-alt" @click="remove(index)"></i>
                 </li>   
                 
             </ul>
+            <h1 v-else>
+                Crea una To Do List <i class="fas fa-clipboard-list"></i>
+            </h1>
         </div>
 
 

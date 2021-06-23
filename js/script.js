@@ -17,7 +17,8 @@ const app = new Vue ({
     data :
     {
         nuovaLista : '',
-        lista : [
+        lista : 
+        [
             'Organizzare il trasloco',
             'Fare la spesa',
             'Mandare e-mail a J.J.'
@@ -28,16 +29,24 @@ const app = new Vue ({
     methods :
     {
         capitalize(string) {
+           
             return string.charAt(0).toUpperCase() + string.slice(1);
         },
         pushToDo(){
-            if (this.nuovaLista == ''){
+
+            if( this.nuovaLista == ''  )
+            {
                 alert('Inserire del testo');
-            }else{
-            this.lista.push(this.nuovaLista.toUpperCase(1));
-            this.nuovaLista = '';
+                return;
             }
-        } 
+           
+            this.lista.push(this.capitalize( this.nuovaLista.toLowerCase()));
+            this.nuovaLista = '';
+           
+        },
+        remove(indice){
+            this.lista.splice(indice, 1);
+        }
     }
 });
 

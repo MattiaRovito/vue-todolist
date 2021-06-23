@@ -45,14 +45,12 @@
 
 .list
 {
-    height: 60%;
     margin: auto;
     width: 80%;
     background-color: lightblue;
     border-radius: 15px;
 
 }
-
 
 .list ul
 {
@@ -82,9 +80,22 @@
     color: red;
 }
 
-.clearfix::after {
+.clearfix::after 
+{
     content: "";
     clear: both;
     display: table;
 }
 
+
+h1
+{
+    padding: 20px;
+    text-align: center;
+}
+
+h1 i
+{
+    margin-left: 5px;
+    vertical-align: middle;
+}
